@@ -32,6 +32,8 @@ jobs:
     - name: Commit changelog and manifest files
       id: id-commit
       run: |
+        git config --global user.email "no-reply@google.com"
+        git config --global user.name "Google Robot"
         git checkout -b "pr_bot-$GITHUB_RUN_ID"
         git add -A
         git commit --message "feat: run generator"
