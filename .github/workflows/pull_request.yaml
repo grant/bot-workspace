@@ -38,7 +38,7 @@ jobs:
         git checkout -b "pr_bot-$GITHUB_RUN_ID"
         git add -A
         NOW=$(date +"%m-%d-%Y")
-        git commit --message "feat: run generator $NOW"
+        git commit --message "feat: run generator (${NOW})"
         git push origin "pr_bot-$GITHUB_RUN_ID"
         echo "Created commit: $(git rev-parse HEAD)"
         gh pr create --title "Run the generator" --body "AUTOMATED PR! This PR was created from a recent push to the default branch."
