@@ -37,6 +37,7 @@ jobs:
         git checkout -b "pr_bot-$GITHUB_RUN_ID"
         git add -A
         git commit --message "feat: run generator"
+        git push origin "pr_bot-$GITHUB_RUN_ID"
         echo "Created commit: $(git rev-parse HEAD)"
     - name: Create pull request
       env:
