@@ -46,4 +46,5 @@ jobs:
           gh pr create --title "Run the generator (${NOW})" --body "AUTOMATED PR! This PR was created from a recent push to the default branch."
         else
           # No changes after running generator
+          echo "No PR to create."
         fi
