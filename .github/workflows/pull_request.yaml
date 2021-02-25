@@ -40,4 +40,4 @@ jobs:
         git commit --message "feat: run generator"
         git push origin "pr_bot-$GITHUB_RUN_ID"
         echo "Created commit: $(git rev-parse HEAD)"
-        gh pr create --title "Run the generator." --body "AUTOMATED PR! This PR was created from a push to the default branch."
+        gh pr create --title "Run the generator" --body "AUTOMATED PR! \nThis PR was created from a push to the default branch."
